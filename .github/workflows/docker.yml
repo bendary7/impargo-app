@@ -31,6 +31,8 @@
          docker build ./golang -t a84136757/golang:1.0.0
      - name: docker push
        run: |
+          sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+          sudo chmod g+rwx "/home/$USER/.docker" -R
           docker push a84136757/csharp:1.0.0
           docker push a84136757/nodejs:1.0.0
           docker push a84136757/python:1.0.0
