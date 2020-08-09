@@ -1,6 +1,6 @@
  name: Docker Series Builds
 
- #uncomment to enable push trigger
+ 
  on: [push]
 
  jobs:
@@ -15,7 +15,7 @@
          DOCKER_USER: ${{ secrets.DOCKER_USER }}   
          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
        run: |
-         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+         sudo docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
        
      - name: docker build csharp
        run: |
@@ -31,7 +31,7 @@
          docker build ./golang -t aimvector/golang:1.0.0
      - name: docker push
        run: |
-         docker push aimvector/csharp:1.0.0
-         docker push aimvector/nodejs:1.0.0
-         docker push aimvector/golang:1.0.0
-         docker push aimvector/python:1.0.0
+         sudo docker push aimvector/csharp:1.0.0
+         sudo docker push aimvector/nodejs:1.0.0
+         sudo docker push aimvector/golang:1.0.0
+         sudo docker push aimvector/python:1.0.0
