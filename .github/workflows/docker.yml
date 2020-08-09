@@ -25,13 +25,13 @@
          docker build ./nodejs -t bendary7/nodejs:1.0.0
      - name: docker build python
        run: |
-         docker build ./python -t bendary7/python:2.0.0
+         docker build ./python -t bendary7/python:1.0.0
      - name: docker build golang
        run: |
-         docker build ./golang -t bendary7/golang:2.0.0
+         docker build ./golang -t bendary7/golang:1.0.0
      - name: docker push
        run: |
-          docker push aimvector/csharp:2.0.0
-          docker push aimvector/nodejs:2.0.0
-          docker push aimvector/python:2.0.0
-          docker push aimvector/golang:2.0.0
+          docker push bendary7/csharp:1.0.0
+          docker push bendary7/nodejs:1.0.0
+          docker push bendary7/python:1.0.0
+          docker push bendary7/golang:1.0.0
