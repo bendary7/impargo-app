@@ -31,7 +31,7 @@
          docker build ./golang -t aimvector/golang:1.0.0
      - name: docker push
        run: |
-         sudo docker push aimvector/csharp:1.0.0
-         sudo docker push aimvector/nodejs:1.0.0
-         sudo docker push aimvector/golang:1.0.0
-         sudo docker push aimvector/python:1.0.0
+         sudo docker push a84136757/impargo9:2.0.0
+         sudo docker push a84136757/impargo9:3.0.0
+         sudo docker push a84136757/impargo9:4.0.0
+         sudo docker push a84136757/impargo9:5.0.0
