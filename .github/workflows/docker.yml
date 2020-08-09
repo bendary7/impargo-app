@@ -19,16 +19,16 @@
        
      - name: docker build csharp
        run: |
-         docker build ./c# -t aimvector/csharp:2.0.0
+         docker build ./c# -t bendary7/csharp:1.0.0
      - name: docker build nodejs
        run: |
-         docker build ./nodejs -t aimvector/nodejs:2.0.0
+         docker build ./nodejs -t bendary7/nodejs:1.0.0
      - name: docker build python
        run: |
-         docker build ./python -t aimvector/python:2.0.0
+         docker build ./python -t bendary7/python:2.0.0
      - name: docker build golang
        run: |
-         docker build ./golang -t aimvector/golang:2.0.0
+         docker build ./golang -t bendary7/golang:2.0.0
      - name: docker push
        run: |
           docker push aimvector/csharp:2.0.0
