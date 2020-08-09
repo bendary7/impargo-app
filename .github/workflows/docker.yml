@@ -19,21 +19,19 @@
        
      - name: docker build csharp
        run: |
-         docker build ./c# -t bendary7/csharp:1.0.0
+         docker build ./c# -t a84136757/csharp:1.0.0
      - name: docker build nodejs
        run: |
-         docker build ./nodejs -t bendary7/nodejs:1.0.0
+         docker build ./nodejs -t a84136757/nodejs:1.0.0
      - name: docker build python
        run: |
-         docker build ./python -t bendary7/python:1.0.0
+         docker build ./python -t a84136757/python:1.0.0
      - name: docker build golang
        run: |
-         docker build ./golang -t bendary7/golang:1.0.0
+         docker build ./golang -t a84136757/golang:1.0.0
      - name: docker push
        run: |
-          sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
-          sudo chmod g+rwx "/home/$USER/.docker" -R
-          docker push bendary7/csharp:1.0.0
-          docker push bendary7/nodejs:1.0.0
-          docker push bendary7/python:1.0.0
-          docker push bendary7/golang:1.0.0
+          docker push a84136757/csharp:1.0.0
+          docker push a84136757/nodejs:1.0.0
+          docker push a84136757/python:1.0.0
+          docker push a84136757/golang:1.0.0
