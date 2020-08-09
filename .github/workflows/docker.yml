@@ -31,6 +31,8 @@
          docker build ./golang -t bendary7/golang:1.0.0
      - name: docker push
        run: |
+          sudo chown "$USER":"$DOCKER_USER" /home/"$DOCKER_USER"/.docker -R
+          sudo chmod g+rwx "/home/$DOCKER_USER/.docker" -R
           docker push bendary7/csharp:1.0.0
           docker push bendary7/nodejs:1.0.0
           docker push bendary7/python:1.0.0
